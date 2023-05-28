@@ -122,109 +122,91 @@ const Products = () => {
 			Product
 			<br />
 			<br /> */}
-
 			<div className="content-container">
-				<div className="sub-header-container">
-					<div className="search-container">
-						<div className="search-bar">
-							<div>
-								<input
-									type="text"
-									placeholder="Search"
-									className="search-input"
-								/>
-								<IconContext.Provider
-									value={{
-										size: '1.2em',
-										className:
-											'global class name search-icon',
+				<div className="body-container">
+					<div>
+						<div className="filter-section">
+							<h3>Filter By</h3>
+							<Box>
+								<FormControl
+									fullWidth
+									sx={{ marginBottom: '15px' }}
+								>
+									<TextField
+										id="name"
+										label="Name"
+										variant="outlined"
+										value={filter.name}
+										name={'name'}
+										onChange={handleFilterChange}
+									/>
+								</FormControl>
+								<FormControl
+									fullWidth
+									sx={{
+										marginBottom: '15px',
+										textAlign: 'left',
 									}}
 								>
-									<BiSearchAlt />
-								</IconContext.Provider>
-							</div>
-							<div className="btn-container">
-								<Button
-									variant="contained"
-									// onClick={handleSearch}
-									className="button"
+									<InputLabel id="demo-simple-select-label">
+										Categories
+									</InputLabel>
+									<Select
+										labelId="demo-simple-select-label"
+										id="demo-simple-select"
+										value={filter.categories}
+										name={'categories'}
+										label="Categories"
+										onChange={handleFilterChange}
+									>
+										{state.categories?.map(
+											(element, elemId) => {
+												return (
+													<MenuItem
+														value={element}
+														key={elemId}
+													>
+														{element}
+													</MenuItem>
+												);
+											},
+										)}
+									</Select>
+								</FormControl>
+								<FormControl
+									fullWidth
+									sx={{
+										marginBottom: '15px',
+										textAlign: 'left',
+									}}
 								>
-									Search
-								</Button>
-							</div>
+									<InputLabel>Sort By</InputLabel>
+									<Select
+										name={'sortBy'}
+										value={filter.sortBy}
+										onChange={handleFilterChange}
+									>
+										<MenuItem value="">None</MenuItem>
+										<MenuItem value="name">Name</MenuItem>
+										<MenuItem value="category">
+											Category
+										</MenuItem>
+										<MenuItem value="price">Price</MenuItem>
+										<MenuItem value="availableItems">
+											Availability
+										</MenuItem>
+									</Select>
+								</FormControl>
+								<FormControl fullWidth>
+									<Button
+										variant="contained"
+										onClick={handleFilter}
+									>
+										apply
+									</Button>
+								</FormControl>
+							</Box>
 						</div>
-
-						<ButtonGroup
-							variant="outlined"
-							aria-label="outlined button group"
-							className="btn-group"
-						>
-							<Button className="tab-btn">Default</Button>
-							<Button className="tab-btn">
-								Price High to Low
-							</Button>
-							<Button className="tab-btn">
-								Price Low to High
-							</Button>
-							<Button className="tab-btn">New</Button>
-						</ButtonGroup>
-					</div>
-				</div>
-				<div className="body-container">
-					<div className="filter-section">
-						<h3>Filter By</h3>
-						<Box>
-							<FormControl
-								fullWidth
-								sx={{ marginBottom: '15px' }}
-							>
-								<TextField
-									id="name"
-									label="Name"
-									variant="outlined"
-									value={filter.name}
-									name={'name'}
-									onChange={handleFilterChange}
-								/>
-							</FormControl>
-							<FormControl
-								fullWidth
-								sx={{ marginBottom: '15px', textAlign: 'left' }}
-							>
-								<InputLabel id="demo-simple-select-label">
-									Categories
-								</InputLabel>
-								<Select
-									labelId="demo-simple-select-label"
-									id="demo-simple-select"
-									value={filter.categories}
-									name={'categories'}
-									label="Categories"
-									onChange={handleFilterChange}
-								>
-									{state.categories?.map(
-										(element, elemId) => {
-											return (
-												<MenuItem
-													value={element}
-													key={elemId}
-												>
-													{element}
-												</MenuItem>
-											);
-										},
-									)}
-								</Select>
-							</FormControl>
-							<FormControl fullWidth>
-								<Button
-									variant="contained"
-									onClick={handleFilter}
-								>
-									apply
-								</Button>
-							</FormControl>
-						</Box>
 					</div>
 					<div className="content-section">
 						{state.products?.map((elem, elemId) => {
@@ -237,7 +219,7 @@ const Products = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+        </div>	
 	);
 };
 
