@@ -1,9 +1,19 @@
-
 import React, { useContext, useEffect, useState } from 'react';
 import './Cart.css';
 import { BackendContext } from '../context/context';
-import { Box, Button, FormControl, TextField, Typography } from '@mui/material';
+import {
+	Box,
+	Button,
+	FormControl,
+	FormControlLabel,
+	FormLabel,
+	Radio,
+	RadioGroup,
+	TextField,
+	Typography,
+} from '@mui/material';
 import CustomModal from '../components/Modal';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 	const { baseUrl } = useContext(BackendContext);
@@ -15,7 +25,14 @@ const Cart = () => {
 		isAddressModalOpen: false,
 	});
 
+	const [order, setOrder] = useState({
+		product: JSON.parse(sessionStorage.getItem('cart'))[0].id,
+		address: '',
+		quantity: JSON.parse(sessionStorage.getItem('cart'))[0].productCount,
+	});
+
 	useEffect(() => {
+		fetchAddresses();
 		return () => {
 			cart.cartItems.map((el) => {
 				fetch(`${baseUrl}api/v1/products/${el.id}`, {})
@@ -29,10 +46,6 @@ const Cart = () => {
 		};
 	}, []);
 
-	useEffect(() => {
-		console.log('items = ', items);
-	}, [items]);
-
 	const [addresses, setAddresses] = useState([
 		{
 			name: '',
@@ -45,6 +58,10 @@ const Cart = () => {
 		},
 	]);
 
+	useEffect(() => {
+		console.log(addresses);
+	}, []);
+
 	const [formData, setFormData] = useState({
 		name: '',
 		contactNumber: '',
@@ -55,11 +72,7 @@ const Cart = () => {
 		zipCode: '',
 	});
 
-	useEffect(() => {
-		console.log(addresses);
-	}, [addresses]);
-
-	useEffect(() => {
+	const fetchAddresses = () => {
 		const auth_token = sessionStorage.getItem('auth-token');
 		fetch(`${baseUrl}api/v1/addresses`, {
 			method: 'GET',
@@ -83,7 +96,7 @@ const Cart = () => {
 				// Handle any errors
 				console.error('Error:', error);
 			});
-	}, []);
+	};
 
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -126,6 +139,8 @@ const Cart = () => {
 				console.error('Error:', error);
 			});
 
+		fetchAddresses();
+
 		// Reset form fields
 		setFormData({
 			name: '',
@@ -138,6 +153,14 @@ const Cart = () => {
 		});
 	};
 
+	const handleAddressChange = (event) => {
+		const { value } = event.target;
+		setOrder((ref) => ({
+			...ref,
+			address: value,
+		}));
+	};
+
 	const toggleModal = () => {
 		if (state.isAddressModalOpen) {
 			setState((ref) => ({ ...ref, isAddressModalOpen: false }));
@@ -145,13 +168,33 @@ const Cart = () => {
 			setState((ref) => ({ ...ref, isAddressModalOpen: true }));
 		}
 	};
+
 	const closeModal = () => {
 		setState((ref) => ({ ...ref, isAddressModalOpen: false }));
 	};
+
+	const handleCheckout = () => {
+		fetch(`${baseUrl}api/v1/orders`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'x-auth-token': sessionStorage.getItem('auth-token'),
+			},
+			body: JSON.stringify(order),
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data))
+			.catch((err) => console.log(err));
+		console.log('checkout = ', order);
+	};
+
 	return (
 		<div className="cart-container">
 			<div className="cart-items-section">
 				<div className="cart-items-container">
+					<Typography sx={{ textAlign: 'left', padding: '0px' }}>
+						<Link to={'/products'}> continue shopping</Link>
+					</Typography>
 					{items?.map((el) => {
 						return (
 							<div className={'cart-items'}>
@@ -203,7 +246,51 @@ const Cart = () => {
 					})}
 				</div>
 
-				<div>
+				<div className="cart-right">
+					<div className="cart-checkout-section">
+						<div className="checkout-data">
+							<FormControl sx={{ textAlign: 'left' }} fullWidth>
+								<FormLabel id="demo-radio-buttons-group-label">
+									Addresses
+								</FormLabel>
+								<RadioGroup
+									aria-labelledby="demo-radio-buttons-group-label"
+									value={order.address}
+									name="radio-buttons-group"
+									onChange={handleAddressChange}
+								>
+									{addresses.length
+										? addresses?.map((el, elXid) => {
+												return (
+													<Box
+														sx={{
+															textAlign: 'left',
+															padding: '5px',
+														}}
+													>
+														<FormControlLabel
+															value={el._id}
+															control={<Radio />}
+															label={el.street}
+														/>
+													</Box>
+												);
+										  })
+										: null}
+								</RadioGroup>
+							</FormControl>
+							<Box>
+								<Button
+									color="primary"
+									variant="contained"
+									sx={{ marginTop: '20px' }}
+									onClick={toggleModal}
+								>
+									Add Address
+								</Button>
+							</Box>
+						</div>
+					</div>
 					<div className="cart-checkout-section">
 						<div className="checkout-data">
 							<Typography>
@@ -214,102 +301,74 @@ const Cart = () => {
 							sx={{ width: '100%' }}
 							color={'primary'}
 							variant={'contained'}
+							onClick={handleCheckout}
 						>
 							checkout
 						</Button>
 					</div>
-					<div className="cart-checkout-section">
-						<div className="checkout-data">
-							<Button
-								color="primary"
-								variant="contained"
-								onClick={toggleModal}
-							>
-								Add Address
-							</Button>
-						</div>
-					</div>
 				</div>
 			</div>
-			<div>
-				{addresses.length
-					? addresses?.map((el, elXid) => {
-							return (
-								<Box
-									sx={{
-										borderRadius: '5px',
-										border: '1px solid black',
-									}}
-								>
-									<div>{el.street}</div>
-									<div>
-										{el.city} - {el.state}
-									</div>
-								</Box>
-							);
-					  })
-					: null}
-			</div>
+			<div></div>
 			<CustomModal
 				isOpen={state.isAddressModalOpen}
 				handleClose={closeModal}
-				className="Modal"
 			>
 				<h1 className="cart-title">Cart</h1>
 				<form onSubmit={handleSubmit}>
-					<Box className="form-group"
-					 sx={{display:"flex",
-					 justifyContent:"space-evenly"}}>
-						
-						<TextField
-							className="input"
-							label="Name"
-							type="text"
-							id="name"
-							name="name"
-							value={formData.name}
-							onChange={handleInputChange}
-							required
-						/>
-					
-					
-						<TextField
-							className="input"
-							label="Contact Number"
-							type="text"
-							id="contactNumber"
-							name="contactNumber"
-							value={formData.contactNumber}
-							onChange={handleInputChange}
-							required
-						/>
+					<Box sx={{ display: 'flex' }}>
+						<FormControl fullWidth sx={{ margin: '5px' }}>
+							<TextField
+								className="input"
+								label="Name"
+								type="text"
+								id="name"
+								name="name"
+								value={formData.name}
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
+						<FormControl fullWidth sx={{ margin: '5px' }}>
+							<TextField
+								className="input"
+								label="Contact Number"
+								type="text"
+								id="contactNumber"
+								name="contactNumber"
+								value={formData.contactNumber}
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
 					</Box>
-					<Box className="form-group"
-					  sx={{display:"flex",
-					  justifyContent:"space-evenly",}}>
-						<TextField
-							className="input"
-							label="City"
-							type="text"
-							id="city"
-							name="city"
-							value={formData.city}
-							onChange={handleInputChange}
-							required
-						/>
-					
-						<TextField
-							className="input"
-							label="Landmark"
-							type="text"
-							id="landmark"
-							name="landmark"
-							value={formData.landmark}
-							onChange={handleInputChange}
-						/>
+
+					<Box sx={{ display: 'flex' }}>
+						<FormControl fullWidth sx={{ margin: '5px' }}>
+							<TextField
+								className="input"
+								label="City"
+								type="text"
+								id="city"
+								name="city"
+								value={formData.city}
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
+						<FormControl fullWidth sx={{ margin: '5px' }}>
+							<TextField
+								className="input"
+								label="Landmark"
+								type="text"
+								id="landmark"
+								name="landmark"
+								value={formData.landmark}
+								onChange={handleInputChange}
+							/>
+						</FormControl>
 					</Box>
 					<FormControl fullWidth>
-						<TextField sx={{width:"100%",marginBottom:"5px"}}
+						<TextField
 							className="input"
 							label="Street"
 							type="text"
@@ -320,30 +379,32 @@ const Cart = () => {
 							required
 						/>
 					</FormControl>
-					<Box className="form-group"
-					  sx={{display:"flex",
-					  justifyContent:"space-evenly"}}>
-						<TextField
-							className="input"
-							label="State"
-							type="text"
-							id="state"
-							name="state"
-							value={formData.state}
-							onChange={handleInputChange}
-							required
-						/>
-					
-						<TextField
-							className="input"
-							label="Zip Code"
-							type="text"
-							id="zipCode"
-							name="zipCode"
-							value={formData.zipCode}
-							onChange={handleInputChange}
-							required
-						/>
+
+					<Box sx={{ display: 'flex' }}>
+						<FormControl fullWidth sx={{ margin: '5px' }}>
+							<TextField
+								className="input"
+								label="State"
+								type="text"
+								id="state"
+								name="state"
+								value={formData.state}
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
+						<FormControl fullWidth sx={{ margin: '5px' }}>
+							<TextField
+								className="input"
+								label="Zip Code"
+								type="text"
+								id="zipCode"
+								name="zipCode"
+								value={formData.zipCode}
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
 					</Box>
 					<Button
 						className="button"
@@ -356,7 +417,6 @@ const Cart = () => {
 				</form>
 			</CustomModal>
 		</div>
-
 	);
 };
 
