@@ -1,0 +1,56 @@
+[
+	{
+		"name": "",
+		"category": "",
+		"price": 120,
+		"description": "something good",
+		"manufacturer": "Nike",
+		"availableItems": 100,
+		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "",
+		"category": "",
+		"price": 120,
+		"description": "something good",
+		"manufacturer": "Nike",
+		"availableItems": 100,
+		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "",
+		"category": "",
+		"price": 120,
+		"description": "something good",
+		"manufacturer": "Nike",
+		"availableItems": 100,
+		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "",
+		"category": "",
+		"price": 120,
+		"description": "something good",
+		"manufacturer": "Nike",
+		"availableItems": 100,
+		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "",
+		"category": "",
+		"price": 120,
+		"description": "something good",
+		"manufacturer": "Nike",
+		"availableItems": 100,
+		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "",
+		"category": "",
+		"price": 120,
+		"description": "something good",
+		"manufacturer": "Nike",
+		"availableItems": 100,
+		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	}
+]

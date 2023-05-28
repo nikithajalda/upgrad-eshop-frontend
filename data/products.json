@@ -1,0 +1,191 @@
+[
+	{
+		"name": "Dell XPS 15",
+		"category": "Electronics",
+		"price": 2000,
+		"description": "Powerful laptop with high-performance specifications.",
+		"manufacturer": "Dell",
+		"availableItems": 10,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Slim Fit T-Shirt",
+		"category": "Clothing",
+		"price": 25,
+		"description": "Comfortable and stylish t-shirt for casual wear.",
+		"manufacturer": "BrandXYZ",
+		"availableItems": 50,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "The Great Gatsby",
+		"category": "Books",
+		"price": 12.99,
+		"description": "Classic novel by F. Scott Fitzgerald.",
+		"manufacturer": "Penguin Books",
+		"availableItems": 20,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Wireless Bluetooth Headphones",
+		"category": "Electronics",
+		"price": 50,
+		"description": "High-quality headphones with noise-cancellation feature.",
+		"manufacturer": "AudioTech",
+		"availableItems": 15,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Samsung Galaxy S21",
+		"category": "Electronics",
+		"price": 999,
+		"description": "Flagship smartphone with advanced features.",
+		"manufacturer": "Samsung",
+		"availableItems": 5,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Cotton Blend Jeans",
+		"category": "Clothing",
+		"price": 45,
+		"description": "Classic jeans made from a comfortable cotton blend.",
+		"manufacturer": "FashionDenim",
+		"availableItems": 30,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "To Kill a Mockingbird",
+		"category": "Books",
+		"price": 9.99,
+		"description": "Acclaimed novel by Harper Lee.",
+		"manufacturer": "HarperCollins",
+		"availableItems": 25,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Bluetooth Speaker",
+		"category": "Electronics",
+		"price": 80,
+		"description": "Portable speaker with wireless connectivity.",
+		"manufacturer": "SoundWave",
+		"availableItems": 12,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Casual Sneakers",
+		"category": "Footwear",
+		"price": 60,
+		"description": "Stylish and comfortable sneakers for everyday wear.",
+		"manufacturer": "ShoeZone",
+		"availableItems": 40,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "The Lord of the Rings",
+		"category": "Books",
+		"price": 19.99,
+		"description": "Epic fantasy trilogy by J.R.R. Tolkien.",
+		"manufacturer": "Houghton Mifflin Harcourt",
+		"availableItems": 15,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Digital Camera",
+		"category": "Electronics",
+		"price": 500,
+		"description": "High-resolution digital camera for photography enthusiasts.",
+		"manufacturer": "CapturePro",
+		"availableItems": 8,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Crew Neck Sweater",
+		"category": "Clothing",
+		"price": 35,
+		"description": "Warm and stylish sweater for the winter season.",
+		"manufacturer": "CozyKnits",
+		"availableItems": 20,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Harry Potter and the Sorcerer's Stone",
+		"category": "Books",
+		"price": 14.99,
+		"description": "First book in the Harry Potter series by J.K. Rowling.",
+		"manufacturer": "Scholastic",
+		"availableItems": 30,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Wireless Gaming Mouse",
+		"category": "Electronics",
+		"price": 70,
+		"description": "High-performance mouse for gaming enthusiasts.",
+		"manufacturer": "GameTech",
+		"availableItems": 18,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Athletic Running Shoes",
+		"category": "Footwear",
+		"price": 75,
+		"description": "Lightweight and supportive shoes for running.",
+		"manufacturer": "RunPro",
+		"availableItems": 25,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "The Catcher in the Rye",
+		"category": "Books",
+		"price": 11.99,
+		"description": "Classic novel by J.D. Salinger.",
+		"manufacturer": "Little, Brown and Company",
+		"availableItems": 10,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Smart TV",
+		"category": "Electronics",
+		"price": 800,
+		"description": "High-definition smart TV with streaming capabilities.",
+		"manufacturer": "TechVision",
+		"availableItems": 7,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Leather Jacket",
+		"category": "Clothing",
+		"price": 150,
+		"description": "Stylish leather jacket for a trendy look.",
+		"manufacturer": "FashionTrends",
+		"availableItems": 15,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "The Hobbit",
+		"category": "Books",
+		"price": 10.99,
+		"description": "Fantasy novel by J.R.R. Tolkien.",
+		"manufacturer": "Houghton Mifflin Harcourt",
+		"availableItems": 20,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Wireless Earbuds",
+		"category": "Electronics",
+		"price": 120,
+		"description": "Compact and high-quality wireless earbuds.",
+		"manufacturer": "AudioTech",
+		"availableItems": 10,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	},
+	{
+		"name": "Running Shorts",
+		"category": "Clothing",
+		"price": 30,
+		"description": "Comfortable and breathable shorts for running.",
+		"manufacturer": "RunTech",
+		"availableItems": 35,
+		"imageURL": "https://static.nike.com/a/images/t_default/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+	}
+]

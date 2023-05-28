@@ -1,0 +1,61 @@
+.navbar-container {
+	display: flex;
+	position: relative;
+	padding: 10px;
+	justify-content: space-between;
+	box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.logo .icon-style {
+	padding-top: 3px;
+	margin: auto;
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+
+	font-size: large;
+	font-weight: bold;
+	font-family: 'Kalam', cursive;
+}
+.logo div .btn-container {
+	padding: 10px;
+}
+.logo a {
+	color: #1a759f;
+	text-decoration: none;
+}
+.logo-menu-container {
+	width: 18%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.home a {
+	color: gray;
+	font-weight: bold;
+	font-size: large;
+}
+.home a:hover {
+	text-decoration-line: underline;
+}
+.btn-container .button {
+	padding: 5px;
+	width: 90px;
+	border-radius: 20px;
+	margin-top: 10px;
+	/* margin-right: 10px; */
+	border: 2px;
+	background-color: #1a759f;
+}
+
+/* @media Query */
+@media (max-width: 800px) {
+	.logo {
+		width: 25vw;
+	}
+	.logo-menu-container {
+		width: 38%;
+	}
+}
