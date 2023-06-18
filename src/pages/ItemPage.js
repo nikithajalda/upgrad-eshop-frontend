@@ -144,50 +144,49 @@ const ItemPage = () => {
 						className="aspect-square"
 						src={state.imageURL}
 						alt={'Unsupported image.'}
-						height="500"
-						width="500"
+						height="200"
+						width="200"
 					/>
 				</div>
-				<div className=" ml-24 px-6 py-2 max-w-lg w-full">
-					<div className="flex flex-col p-2">
-						<h1 className="text-3xl font-fjalla">{state.name}</h1>
-						<h1 className="text-lg font-fjalla">
+				<div className="flex ml-24 px-6 py-2 max-w-lg w-full">
+					<div className=" p-2">
+						<h3 className="text-3xl font-fjalla">{state.name}</h3>
+						<h3 className="text-lg font-fjalla">
 							{state.description}
-						</h1>
+						</h3>
 					</div>
-					<div className="flex flex-col">
-						<h1 className="uppercase text-3xl pb-4">
+					<div className="flex">
+						
+						<h3 className="uppercase text-3xl pb-4">
 							specifications
-						</h1>
+						</h3>
+						</div>
 						<div className="grid grid-cols-3 gap-4">
 							<div className="">
-								<h1 className="text-lg font-fjalla text-terbg">
-									Category
-								</h1>
-								<h1 className="text-lg font-fjalla">
+								<h3 className="text-lg font-fjalla text-terbg">
+									Category - {state.category}
+								</h3>
+								{/* <h2 className="text-lg font-fjalla">
 									{state.category}
-								</h1>
+								</h2> */}
 							</div>
 							<div className="">
-								<h1 className="text-lg font-fjalla text-terbg">
-									manufacturer
-								</h1>
-								<h1 className="text-lg font-fjalla">
+								<h3 className="text-lg font-fjalla text-terbg">
+									manufacturer - {state.manufacturer}
+								</h3>
+								{/* <h2 className="text-lg font-fjalla">
 									{state.manufacturer}
-								</h1>
+								</h2> */}
 							</div>
 							<div className="">
-								<h1 className="text-lg font-fjalla text-terbg">
-									Available Items
-								</h1>
-								<h1 className="text-lg font-fjalla">
-									{state.availableItems}
-								</h1>
+								<h3 className="text-lg font-fjalla text-terbg">
+									Available Items - {state.availableItems}
+								</h3>
 							</div>
 						</div>
-					</div>
-					<div className="flex flex-col">
-						<h2>Price - {state.price}</h2>
+					{/* </div> */}
+					<div className="flex ">
+						<h3>Price - {state.price}</h3>
 					</div>
 					<br />
 					<div className="flex ">
@@ -214,13 +213,14 @@ const ItemPage = () => {
 								</Button>
 							</Box>
 						) : (
+							<Link to={`/cart`}>
 							<Button
 								sx={{ margin: '10px' }}
 								variant="contained"
-								onClick={handleAddToCart}
-							>
+								onClick={handleAddToCart}>
 								Add To Cart
 							</Button>
+							</Link>	
 						)}
 						<Button sx={{ margin: '10px' }} variant="contained">
 							Buy Now

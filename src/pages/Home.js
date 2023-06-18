@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Home.css';
-import banner from '../assets/banner.jpg';
-import product from '../assets/product.jfif';
+// import banner from '../assets/banner.jpg';
+// import product from '../assets/product.jfif';
 import {
 	Card,
 	CardActionArea,
@@ -32,7 +32,7 @@ const Home = () => {
 	return (
 		<div>
 			<div className="banner-container">
-				<img src={banner} alt="banner" />
+				<img  src="https://img.freepik.com/premium-vector/3d-online-shopping-social-media-mobile-applications-websites-concepts_131114-30.jpg?w=996" alt="banner" />
 			</div>
 			<div className="display-products">
 				<Link to="/products">View more</Link>

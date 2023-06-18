@@ -25,6 +25,7 @@ const Products = () => {
 	const [filter, setFilter] = useState({
 		name: '',
 		categories: '',
+		sortBy :" "
 	});
 
 	useEffect(() => {
@@ -59,31 +60,7 @@ const Products = () => {
 				console.log(err);
 			});
 	}, []);
-
-	// const getApi = async () => {
-	// 	const response = await fetch('https://fakestoreapi.com/products');
-	// 	// console.log(response);
-	// 	const data = await response.json();
-	// 	setState((ref) => ({ ...ref, products: data }));
-	// };
-	// useEffect(() => {
-	// 	getApi();
-	// }, []);
-
-	// const handleSearch = () => {
-	// 	fetch(`${baseUrl}api/v1/products`, {
-	// 		method: 'GET',
-	// 		headers: { 'Content-Type': 'application/json' },
-	// 	})
-	// 		.then((response) => response.json())
-	// 		.then((data) => {
-	// 			console.log(data);
-	// 		})
-	// 		.catch((err) => {
-	// 			console.log(err);
-	// 		});
-	// };
-
+	
 	const handleFilterChange = (event) => {
 		// const { categories } = state;
 		const { name, value } = event.target;
@@ -92,7 +69,7 @@ const Products = () => {
 	};
 
 	const handleFilter = () => {
-		const { categories, name } = filter;
+		const { categories, name , sortBy} = filter;
 
 		let query = ``;
 		if (name) {
@@ -102,8 +79,9 @@ const Products = () => {
 			query += `&categories=${categories}`;
 		}
 
+
 		// fetch data from backend to follow the constraints of the filter.
-		fetch(`${baseUrl}api/v1/products?name=${name}&category=${categories}`, {
+		fetch(`${baseUrl}api/v1/products?name=${name}&category=${categories}&sortBy=${sortBy}`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
@@ -180,10 +158,12 @@ const Products = () => {
 										textAlign: 'left',
 									}}
 								>
-									<InputLabel>Sort By</InputLabel>
+										
+									<InputLabel id="sortBy">Sort By</InputLabel>
 									<Select
 										name={'sortBy'}
 										value={filter.sortBy}
+										label="Sort By"
 										onChange={handleFilterChange}
 									>
 										<MenuItem value="">None</MenuItem>

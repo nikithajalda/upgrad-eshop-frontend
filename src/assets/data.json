@@ -1,56 +1,190 @@
 [
 	{
-		"name": "",
-		"category": "",
-		"price": 120,
-		"description": "something good",
-		"manufacturer": "Nike",
-		"availableItems": 100,
-		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+		"name": "Learning how to fly",
+		"category": "Books",
+		"price": 195,
+		"description": "Life lessons for the youth",
+		"manufacturer": "apj abdul kalam",
+		"availableItems": 30,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/61xPDmYV7SL._AC_UL232_SR232,232_.jpg"
 	},
 	{
-		"name": "",
-		"category": "",
-		"price": 120,
-		"description": "something good",
-		"manufacturer": "Nike",
-		"availableItems": 100,
-		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+		"name": "Laptop",
+		"category": "Electronics",
+		"price": 40.999,
+		"description":"Hp 15s, 11th Gen intelCore i3 8GB RAM/1TB HDD +256 GB SSD 15.6 inches",
+		"manufacturer": "Hp",
+		"availableItems": 10,
+		"imageURL":"https://m.media-amazon.com/images/I/71xpFidwZIL._AC_SR180,120_QL70_.jpg"
+
 	},
 	{
-		"name": "",
-		"category": "",
-		"price": 120,
-		"description": "something good",
-		"manufacturer": "Nike",
-		"availableItems": 100,
-		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+		"name": "shoes",
+		"category": "Footwear",
+		"price":1.4999 ,
+		"description":" Bersache Lightweight Black Casual Shoes Sole",
+		"manufacturer": "Asian",
+		"availableItems": 15,
+		"imageURL": "https://m.media-amazon.com/images/I/41UVz4mdLrL._AC_SR160,160_.jpg"
+
 	},
 	{
-		"name": "",
-		"category": "",
-		"price": 120,
-		"description": "something good",
-		"manufacturer": "Nike",
-		"availableItems": 100,
-		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+		"name": "Saree",
+		"category": "Clothing",
+		"price":779 ,
+		"description":" Womens Kanchivaram Banarasi Silk Saree Kanchipuram  ",
+		"manufacturer": "Banaras",
+		"availableItems": 10,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/71p4AcV35XL._AC_UL160_SR160,160_.jpg"
 	},
 	{
-		"name": "",
-		"category": "",
-		"price": 120,
-		"description": "something good",
-		"manufacturer": "Nike",
-		"availableItems": 100,
-		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+		"name": "AirPods",
+		"category": "Electronics",
+		"price": 1.999,
+		"description":"Truke Air Buds Lite True Wireless in Earbuds",
+		"manufacturer": "Truke",
+		"availableItems": 10,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/61FA5YUYFjL._AC_UL232_SR232,232_.jpg"
+
 	},
 	{
-		"name": "",
-		"category": "",
+		"name": "Wings of fire",
+		"category": "Books",
+		"price": 185,
+		"description": "autobiography of abdul kalam",
+		"manufacturer": "apj abdul kalam",
+		"availableItems": 25,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/71KKZlVjbwL._AC_UL232_SR232,232_.jpg"
+	},
+	{
+		"name": "Kurta",
+		"category": "Clothing",
+		"price":899 ,
+		"description":"BIBA women's Rust Liva Atraight printed Kurta",
+		"manufacturer": "BIBA",
+		"availableItems": 16,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/71PyfLbhpnL._AC_UL160_SR160,160_.jpg"
+	},
+	{
+		"name": "Shoes",
+		"category": "FootWear",
+		"price":499 ,
+		"description":"Airrun Men's Running Shoes Ultra Lightweight ",
+		"manufacturer": "AIRRUN",
+		"availableItems": 10,
+		"imageURL": "https://m.media-amazon.com/images/I/511slwem8gL._AC_SR160,160_.jpg"
+
+	},
+	{
+		"name": "Smart TV",
+		"category": "Electronics",
+		"price": 51.390,
+		"description":"LG 139 cm 55 inch 4K UHD Smart TV",
+		"manufacturer": "LG",
+		"availableItems": 10,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/71DKWMTgypL._AC_UL160_SR160,160_.jpg"
+
+	},
+	{
+		"name": "Power Of Subconscious Mind",
+		"category": "Books",
 		"price": 120,
-		"description": "something good",
-		"manufacturer": "Nike",
-		"availableItems": 100,
-		"imageURL": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
+		"description": " one of the most promising self improvement book ",
+		"manufacturer": "Josep Murphy",
+		"availableItems": 30,
+		"imageURL": "https://m.media-amazon.com/images/I/71sBtM3Yi5L._AC_UY218_.jpg"
+	},
+	{
+		"name": "Dress",
+		"category": "Clothing",
+		"price":639 ,
+		"description":"Lymio Dress For Women ",
+		"manufacturer": "Lymio",
+		"availableItems": 18,
+		"imageURL":"https://images-eu.ssl-images-amazon.com/images/I/71WO3DorJAL._AC_UL160_SR160,160_.jpg"
+	},
+	{
+		"name": "Sandle",
+		"category": "Footwear",
+		"price":399 ,
+		"description":" BE Found Women's Casual Classy Platform Heel",
+		"manufacturer": "BE FOUND",
+		"availableItems": 10,
+		"imageURL":"https://m.media-amazon.com/images/I/31FTenc+ZJL._AC_SR160,160_.jpg"
+	},
+	{
+		"name": "Mobiles",
+		"category": "Electronics",
+		"price": 20.999,
+		"description":" Samsung Galaxy s22 Plus 5G",
+		"manufacturer": "Sumsung",
+		"availableItems": 10,
+		"imageURL":"https://m.media-amazon.com/images/I/41Z13aoK1kL._AC_SR160,160_.jpg"
+
+	},
+	{
+		"name": "Fear Not Be Strong",
+		"category": "Books",
+		"price": 100,
+		"description": "A presentation of Swami Vivekananda's Message of strength and fearlessness",
+		"manufacturer": "Swami Vivekananda",
+		"availableItems": 10,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/61cVNCxwLXL._AC_UL232_SR232,232_.jpg"
+	},
+	{
+		"name": "Belive In Yourself",
+		"category": "Books",
+		"price": 120,
+		"description": "In Believe in Yourself, Dr. Murphy stresses about having faith in ones abilities",
+		"manufacturer": "Joseph Murphy",
+		"availableItems": 15,
+		"imageURL": "https://images-eu.ssl-images-amazon.com/images/I/61RlLYVbDSL._AC_UL232_SR232,232_.jpg"
+	},
+	{
+		"name": "Top",
+		"category": "Clothing",
+		"price": 189,
+		"description":" OOMPH! Women's Crepe Tank Top",
+		"manufacturer": "OOMPH!",
+		"availableItems": 10,
+		"imageURL":"https://images-eu.ssl-images-amazon.com/images/I/81qwQ-bWAhL._AC_UL160_SR160,160_.jpg"
+	},
+	{
+		"name": "Sandle",
+		"category": "Footwear",
+		"price": 399,
+		"description":" BE Found Women's Classy Heel Sandle",
+		"manufacturer": "BE FOUND",
+		"availableItems": 10,
+		"imageURL":"https://m.media-amazon.com/images/I/41CUaKbh1XL._AC_SR160,160_.jpg"
+
+	},
+	{
+		"name": "Airpods",
+		"category": "Electronics",
+		"price": 899,
+		"description": "Elago Silicone Case Compatible with Apple Airpods pro 2nd Generation Case Cover",
+		"manufacturer": "Apple",
+		"availableItems": 20,
+		"imageURL": "https://m.media-amazon.com/images/I/51oVejT0+ZL._AC_UY218_.jpg"
+	},
+	{
+		"name": "Shoes",
+		"category": "Footwear",
+		"price": 799,
+		"description":"Campus Mens Shuttle Walking Shoes",
+		"manufacturer": "Campus",
+		"availableItems": 10,
+		"imageURL": "https://m.media-amazon.com/images/I/41WO6gu8FTL._AC_SR160,160_.jpg"
+	},
+	{
+		"name": "JumpSuit",
+		"category": "Clothing",
+		"price":499 ,
+		"description":"Uptownie Lite Women's Maxi Jumpsuit ",
+		"manufacturer": "Uptownie",
+		"availableItems": 15,
+		"imageURL":"https://m.media-amazon.com/images/I/419fqg8GzUL._AC_SR160,200_.jpg"
+
 	}
 ]

@@ -19,10 +19,11 @@
 }
 
 .input {
-	width: 300px;
+	width: auto;
 	padding: 5px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	margin-right:"5px"
 }
 
 .button {

@@ -26,9 +26,9 @@ const Cart = () => {
 	});
 
 	const [order, setOrder] = useState({
-		product: JSON.parse(sessionStorage.getItem('cart'))[0].id,
+		product: JSON.parse(sessionStorage.getItem('cart'))[0]?.id || null,
 		address: '',
-		quantity: JSON.parse(sessionStorage.getItem('cart'))[0].productCount,
+		quantity: JSON.parse(sessionStorage.getItem('cart'))[0]?.productCount || null ,
 	});
 
 	useEffect(() => {
@@ -153,6 +153,14 @@ const Cart = () => {
 		});
 	};
 
+	const handleDelete =(id) =>{
+		console.log(id)
+	  const Delete= items.filter((el) =>el._id !== id );
+	  sessionStorage.setItem( "cart" , JSON.stringify(Delete))
+        setItems(Delete);
+	}
+
+
 	const handleAddressChange = (event) => {
 		const { value } = event.target;
 		setOrder((ref) => ({
@@ -195,7 +203,7 @@ const Cart = () => {
 					<Typography sx={{ textAlign: 'left', padding: '0px' }}>
 						<Link to={'/products'}> continue shopping</Link>
 					</Typography>
-					{items?.map((el) => {
+					{ items?.map((el) => {
 						return (
 							<div className={'cart-items'}>
 								<div className="cart-img">
@@ -224,7 +232,7 @@ const Cart = () => {
 										>
 											{el.price} Rs
 										</Typography> */}
-									</div>
+									</div >
 									<Typography
 										sx={{ padding: '0', textAlign: 'left' }}
 									>
@@ -241,6 +249,13 @@ const Cart = () => {
 										Price - {el.price}
 									</Typography>
 								</div>
+								<Button color="primary"
+									variant="contained"
+									sx={{marginTop:"40px"}}
+									onClick={()=> handleDelete(el._id)}
+								>
+								 Delete
+								</Button>
 							</div>
 						);
 					})}
@@ -315,7 +330,7 @@ const Cart = () => {
 			>
 				<h1 className="cart-title">Cart</h1>
 				<form onSubmit={handleSubmit}>
-					<Box sx={{ display: 'flex' }}>
+					<Box sx={{ display: 'flex'}}>
 						<FormControl fullWidth sx={{ margin: '5px' }}>
 							<TextField
 								className="input"
@@ -367,7 +382,7 @@ const Cart = () => {
 							/>
 						</FormControl>
 					</Box>
-					<FormControl fullWidth>
+					<FormControl fullWidth sx={{margin:"5px" , width:"440px"}}>
 						<TextField
 							className="input"
 							label="Street"

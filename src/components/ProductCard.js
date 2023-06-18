@@ -10,15 +10,17 @@ import React from 'react';
 const ProductCard = ({ product }) => {
 	return (
 		<Card
+		 className="Card"
 			sx={{
 				width: '300px',
 				margin: '10px',
 			}}
 		>
 			<CardActionArea>
+				
 				<CardMedia
 					component="img"
-					sx={{ height: 'auto' }}
+					sx={{ objectFit:"cover", height: '200px', width:"auto", margin:"20px auto" }}
 					image={product.imageURL}
 					alt="bag"
 				/>

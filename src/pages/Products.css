@@ -12,6 +12,9 @@
 	width: 100%;
 	height: fit-content;
 }
+.Card:hover{
+	transform: scale(1.05);
+}
 .filter-section h3,
 .sorting-section h3 {
 	margin-top: 10px;
@@ -72,12 +75,12 @@ a {
 }
 
 .content-section {
-	width: 100%;
+	width: 90%;
 	display: flex;
 	justify-content: space-evenly;
-	flex-wrap: wrap;
+	flex-wrap:wrap;
 	margin: 50px 0px;
-	padding: 20px;
+	padding: 10px;
 	/* box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.1); */
 }
 @media (max-width: 800px) {
