@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Home.css';
-// import banner from '../assets/banner.jpg';
-// import product from '../assets/product.jfif';
 import {
 	Card,
 	CardActionArea,
